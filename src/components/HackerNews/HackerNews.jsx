@@ -6,8 +6,11 @@ import Card from "../shared/Card/Card.jsx";
 import Loading from "../shared/Loading/Loading.jsx";
 
 export default function HackerNews() {
-  const articles = useSelector((state) => state.articles);
-  const loading = useSelector((state) => state.loading);
+  const articles = useSelector((state) => {
+    console.log(state);
+    return state.hackerNews.articles;
+  });
+  const loading = useSelector((state) => state.hackerNews.loading);
   const dispatch = useDispatch();
 
   useEffect(() => {
