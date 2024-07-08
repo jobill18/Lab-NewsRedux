@@ -1,8 +1,5 @@
-const initialState = { loading: false, article: [] };
+const initialState = { loading: false, articles: [] };
 
-export default function reducer(state = initialState, action) {
-  switch (action.type) {
-    default:
-      return state;
-  }
+export default function hackerNewsReducer(state = initialState, action) {
+  return state;
 }
